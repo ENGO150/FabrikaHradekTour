@@ -1,1 +1,10 @@
-/*stuff*/
+#panorama
+{
+    display: inline;
+}
+
+#panorama_div
+{
+    width: 100%;
+    text-align:center;
+}
