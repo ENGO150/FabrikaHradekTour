@@ -1,5 +1,7 @@
+//CONSTANTS
 const WIDTH = 1000;
 const ASPECT_RATIO = 1/2;
+const MOVE_PIECES = 1/8;
 
 //CANVAS SHIT
 let ctx;
@@ -31,8 +33,8 @@ function load_panorama()
 function turn_left() //TODO: MOVE THE RIGHT PART TO LEFT
 {
     //MOVE AN 8th TO LEFT
-    x1 -= WIDTH / 8;
-    x2 -= WIDTH / 8;
+    x1 -= WIDTH * MOVE_PIECES;
+    x2 -= WIDTH * MOVE_PIECES;
 
-    ctx.drawImage(img, x1, 0, img.width - WIDTH / 8, img.height, 0, 0, WIDTH, WIDTH * ASPECT_RATIO); //DRAW
+    ctx.drawImage(img, x1, 0, img.width - WIDTH * MOVE_PIECES, img.height, 0, 0, WIDTH, WIDTH * ASPECT_RATIO); //DRAW
 }
