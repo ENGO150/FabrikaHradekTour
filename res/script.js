@@ -1,7 +1,7 @@
 //CONSTANTS
 const WIDTH = 1000;
 const ASPECT_RATIO = 1/2;
-const MOVE_PIECES = 1/8;
+const MOVE_PIECES = 1/32;
 
 //CANVAS SHIT
 let ctx;
@@ -10,7 +10,7 @@ let img; //THE PANORAMA IMAGE
 
 //CURRENT IMAGE STATE
 let x1 = WIDTH / 2;
-let x2;
+let x2; //TODO? Unused
 
 function load_panorama()
 {
@@ -18,8 +18,8 @@ function load_panorama()
     ctx = canvas.getContext('2d');
     img = new Image(); //IMAGE
 
-    ctx.canvas.height = WIDTH / 2;
-    ctx.canvas.width = WIDTH / 2;
+    ctx.canvas.height = WIDTH * ASPECT_RATIO; //TODO! Possible shit happening
+    ctx.canvas.width = WIDTH / 2; //USER WILL SEE A 1/2 OF THE PANORAMA AT THE TIME
 
     img.onload = function()
     {
