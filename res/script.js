@@ -33,16 +33,16 @@ function load_panorama()
 
 function turn_left()
 {
-    //MOVE AN 8th TO LEFT
-    x1 -= WIDTH * MOVE_PIECES;
-    x2 -= WIDTH * MOVE_PIECES;
-
     if (turn < 0 && (Math.abs(turn) - (1/MOVE_PIECES / 2)) >= 0)
     {
         //ctx.drawImage(img, img.width - WIDTH * MOVE_PIECES * (Math.abs(turn) - (1/MOVE_PIECES / 2)), 0, img.width, img.height, 0, 0, WIDTH * MOVE_PIECES * (Math.abs(turn) - (1/MOVE_PIECES / 2)), WIDTH * ASPECT_RATIO); //DRAW RIGHT PART ON THE LEFT SIDE //TODO
 
         return;
     }
+
+    //MOVE AN 8th TO LEFT
+    x1 -= WIDTH * MOVE_PIECES;
+    x2 -= WIDTH * MOVE_PIECES;
 
     ctx.drawImage(img, x1, 0, img.width - WIDTH * MOVE_PIECES, img.height, 0, 0, WIDTH, WIDTH * ASPECT_RATIO); //DRAW
 
@@ -51,16 +51,16 @@ function turn_left()
 
 function turn_right()
 {
-    //MOVE AN 8th TO LEFT
-    x1 += WIDTH * MOVE_PIECES;
-    x2 += WIDTH * MOVE_PIECES;
-
     if (turn > 0 && (Math.abs(turn) - (1/MOVE_PIECES / 2)) >= 0)
     {
         //ctx.drawImage(img, img.width - WIDTH * MOVE_PIECES * (Math.abs(turn) - (1/MOVE_PIECES / 2)), 0, img.width, img.height, 0, 0, WIDTH * MOVE_PIECES * (Math.abs(turn) - (1/MOVE_PIECES / 2)), WIDTH * ASPECT_RATIO); //DRAW RIGHT PART ON THE LEFT SIDE //TODO
 
         return;
     }
+
+    //MOVE AN 8th TO LEFT
+    x1 += WIDTH * MOVE_PIECES;
+    x2 += WIDTH * MOVE_PIECES;
 
     ctx.drawImage(img, x1, 0, img.width + WIDTH * MOVE_PIECES, img.height, 0, 0, WIDTH, WIDTH * ASPECT_RATIO); //DRAW
 
