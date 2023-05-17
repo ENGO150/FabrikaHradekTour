@@ -11,6 +11,7 @@ let img; //THE PANORAMA IMAGE
 //CURRENT IMAGE STATE
 let x1 = WIDTH / 2;
 let x2; //TODO? Unused
+let turn = 0; //NEGATIVE MEANS IT IS TURNED LEFT FROM CENTER, POSITIVE IS RIGHT
 
 function load_panorama()
 {
@@ -30,11 +31,20 @@ function load_panorama()
     img.src = './res/img/test.jpg';
 }
 
-function turn_left() //TODO: MOVE THE RIGHT PART TO LEFT
+function turn_left()
 {
     //MOVE AN 8th TO LEFT
     x1 -= WIDTH * MOVE_PIECES;
     x2 -= WIDTH * MOVE_PIECES;
 
+    if ((Math.abs(turn) - (1/MOVE_PIECES / 2)) >= 0)
+    {
+        //ctx.drawImage(img, img.width - WIDTH * MOVE_PIECES * (Math.abs(turn) - (1/MOVE_PIECES / 2)), 0, img.width, img.height, 0, 0, WIDTH * MOVE_PIECES * (Math.abs(turn) - (1/MOVE_PIECES / 2)), WIDTH * ASPECT_RATIO); //DRAW RIGHT PART ON THE LEFT SIDE //TODO
+
+        return;
+    }
+
     ctx.drawImage(img, x1, 0, img.width - WIDTH * MOVE_PIECES, img.height, 0, 0, WIDTH, WIDTH * ASPECT_RATIO); //DRAW
+
+    turn--;
 }
