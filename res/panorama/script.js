@@ -7,6 +7,7 @@ const MOVE_PIECES = 1/32;
 let ctx;
 let canvas;
 let img; //THE PANORAMA IMAGE
+let img_url = "";
 
 //CURRENT IMAGE STATE
 let x1 = WIDTH / 2;
@@ -15,6 +16,8 @@ let turn = 0; //NEGATIVE MEANS IT IS TURNED LEFT FROM CENTER, POSITIVE IS RIGHT
 
 function load_panorama()
 {
+    check_param();
+
     ASPECT_RATIO = 1 / ASPECT_RATIO; //FLIP THE RATIO COZ I AM FUCKING DUMB
 
     canvas = document.getElementById('panorama');
@@ -30,7 +33,7 @@ function load_panorama()
         ctx.drawImage(img, x1, 0, x2, img.height, 0, 0, WIDTH, WIDTH * ASPECT_RATIO); //DRAW A HALF OF img
     };
 
-    img.src = './img/test.jpg';
+    img.src = img_url;
 }
 
 function turn_left()
@@ -66,4 +69,18 @@ function turn_right()
     ctx.drawImage(img, x1, 0, img.width + WIDTH * MOVE_PIECES, img.height, 0, 0, WIDTH, WIDTH * ASPECT_RATIO); //DRAW
 
     turn++;
+}
+
+function check_param()
+{
+    let params = new URLSearchParams(window.location.search);
+    img_url = params.get("img");
+
+    if (img_url == null)
+    {
+        alert("This link seems to be corrupted!");
+        //TODO: Return
+    }
+
+    img_url = './img/' + img_url + '.jpg'; //TODO: Change
 }
