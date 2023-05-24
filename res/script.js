@@ -1,6 +1,6 @@
 //CONSTANTS
 const WIDTH = 1000;
-const ASPECT_RATIO = 1/2;
+let ASPECT_RATIO = 4/3; //yes constant
 const MOVE_PIECES = 1/32;
 
 //CANVAS SHIT
@@ -15,6 +15,8 @@ let turn = 0; //NEGATIVE MEANS IT IS TURNED LEFT FROM CENTER, POSITIVE IS RIGHT
 
 function load_panorama()
 {
+    ASPECT_RATIO = 1 / ASPECT_RATIO; //FLIP THE RATIO COZ I AM FUCKING DUMB
+
     canvas = document.getElementById('panorama');
     ctx = canvas.getContext('2d');
     img = new Image(); //IMAGE
