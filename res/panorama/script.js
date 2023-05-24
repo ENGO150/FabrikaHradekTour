@@ -79,7 +79,7 @@ function check_param()
     if (img_url == null)
     {
         alert("This link seems to be corrupted!");
-        //TODO: Return
+        open("../index.html", "_self");
     }
 
     img_url = './img/' + img_url + '.jpg'; //TODO: Change
