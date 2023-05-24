@@ -30,7 +30,7 @@ function load_panorama()
         ctx.drawImage(img, x1, 0, x2, img.height, 0, 0, WIDTH, WIDTH * ASPECT_RATIO); //DRAW A HALF OF img
     };
 
-    img.src = './res/img/test.jpg';
+    img.src = './img/test.jpg';
 }
 
 function turn_left()
