@@ -35,8 +35,7 @@ function turn_left()
 {
     if (turn < 0 && (Math.abs(turn) - (1/MOVE_PIECES / 2)) >= 0)
     {
-        //ctx.drawImage(img, img.width - WIDTH * MOVE_PIECES * (Math.abs(turn) - (1/MOVE_PIECES / 2)), 0, img.width, img.height, 0, 0, WIDTH * MOVE_PIECES * (Math.abs(turn) - (1/MOVE_PIECES / 2)), WIDTH * ASPECT_RATIO); //DRAW RIGHT PART ON THE LEFT SIDE //TODO
-
+        //ctx.drawImage(img, x1, 0, img.width * MOVE_PIECES * (Math.abs(turn) - (1/MOVE_PIECES / 2) + 1), img.height, 0 - x1, 0, img.width * MOVE_PIECES * (Math.abs(turn) - (1/MOVE_PIECES / 2) + 1) * WIDTH/img.width, WIDTH * ASPECT_RATIO); //DRAW A HALF OF img //TODO
         return;
     }
 
