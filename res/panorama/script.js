@@ -85,5 +85,5 @@ function check_param()
     }
 
     img_url = 'http://207.180.212.190/fht/fabrika_imgs/' + img_url + '.jpg'; //TODO: Change
-    ASPECT_RATIO = x / y;
+    if (!x.startsWith(undefined)) ASPECT_RATIO = x / y;
 }
