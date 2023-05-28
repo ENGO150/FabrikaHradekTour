@@ -75,12 +75,15 @@ function check_param()
 {
     let params = new URLSearchParams(window.location.search);
     img_url = params.get("img");
+    x = params.get("aspect_x");
+    y = params.get("aspect_y");
 
-    if (img_url == null)
+    if (img_url == null || x == null || y == null)
     {
         alert("This link seems to be corrupted!");
         open("../index.html", "_self");
     }
 
     img_url = 'http://207.180.212.190/fht/fabrika_imgs/' + img_url + '.jpg'; //TODO: Change
+    ASPECT_RATIO = x / y;
 }
