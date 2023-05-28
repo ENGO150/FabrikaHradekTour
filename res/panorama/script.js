@@ -55,7 +55,7 @@ function turn_left()
 
 function turn_right()
 {
-    if (turn > 0 && (Math.abs(turn) - (1/MOVE_PIECES / 2)) >= 0)
+    if (turn > 0 && (Math.abs(turn) - (1/MOVE_PIECES / 2)) >= 0) //TODO: Broken
     {
         //ctx.drawImage(img, img.width - WIDTH * MOVE_PIECES * (Math.abs(turn) - (1/MOVE_PIECES / 2)), 0, img.width, img.height, 0, 0, WIDTH * MOVE_PIECES * (Math.abs(turn) - (1/MOVE_PIECES / 2)), WIDTH * ASPECT_RATIO); //DRAW RIGHT PART ON THE LEFT SIDE //TODO
 
