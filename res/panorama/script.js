@@ -82,5 +82,5 @@ function check_param()
         open("../index.html", "_self");
     }
 
-    img_url = './img/' + img_url + '.jpg'; //TODO: Change
+    img_url = 'http://207.180.212.190/fht/fabrika_imgs/' + img_url + '.jpg'; //TODO: Change
 }
