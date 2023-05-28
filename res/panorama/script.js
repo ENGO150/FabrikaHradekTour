@@ -1,5 +1,5 @@
 //CONSTANTS
-const WIDTH = 1000;
+let WIDTH = 1000;
 let ASPECT_RATIO = 4/3; //yes constant
 const MOVE_PIECES = 1/32;
 
@@ -10,19 +10,54 @@ let img; //THE PANORAMA IMAGE
 let img_url = "";
 
 //CURRENT IMAGE STATE
-let x1 = WIDTH / 2;
+let x1 = WIDTH / 4;
 let x2; //TODO? Unused
 let turn = 0; //NEGATIVE MEANS IT IS TURNED LEFT FROM CENTER, POSITIVE IS RIGHT
+
+let right_stop = 0;
+let left_stop = 0;
 
 function load_panorama()
 {
     check_param();
+
+    switch (ASPECT_RATIO) //178 = v; 134 = norm; 38 = adam norm; 66 = adam v; 42 = výškové
+    {
+        case 4/3:
+            right_stop = 134;
+            left_stop = -8;
+            break;
+
+        case 3/4:
+            right_stop = 178;
+            break;
+
+        case 16/9:
+            right_stop = 38;
+            left_stop = -9;
+            break;
+
+        case 9/16:
+            right_stop = 66;
+            left_stop = 6;
+            break;
+
+        case 47/102:
+            right_stop = 42;
+            left_stop = 12;
+            break;
+    }
 
     ASPECT_RATIO = 1 / ASPECT_RATIO; //FLIP THE RATIO COZ I AM FUCKING DUMB
 
     canvas = document.getElementById('panorama');
     ctx = canvas.getContext('2d');
     img = new Image(); //IMAGE
+
+    if (WIDTH * ASPECT_RATIO > 600)
+    {
+        WIDTH = 600 / ASPECT_RATIO;
+    }
 
     ctx.canvas.height = WIDTH * ASPECT_RATIO; //TODO! Possible shit happening
     ctx.canvas.width = WIDTH / 2; //USER WILL SEE A 1/2 OF THE PANORAMA AT THE TIME
@@ -38,7 +73,8 @@ function load_panorama()
 
 function turn_left()
 {
-    if (turn < 0 && (Math.abs(turn) - (1/MOVE_PIECES / 2)) >= 0)
+    console.log((Math.abs(turn) - (1/MOVE_PIECES / 2)));
+    if (turn < 0 && (Math.abs(turn) - (1/MOVE_PIECES / 2)) >= left_stop)
     {
         //ctx.drawImage(img, x1, 0, img.width * MOVE_PIECES * (Math.abs(turn) - (1/MOVE_PIECES / 2) + 1), img.height, 0 - x1, 0, img.width * MOVE_PIECES * (Math.abs(turn) - (1/MOVE_PIECES / 2) + 1) * WIDTH/img.width, WIDTH * ASPECT_RATIO); //DRAW A HALF OF img //TODO
         return;
@@ -55,7 +91,7 @@ function turn_left()
 
 function turn_right()
 {
-    if (turn > 0 && (Math.abs(turn) - (1/MOVE_PIECES / 2)) >= 0) //TODO: Broken
+    if (turn > 0 && (Math.abs(turn) - (1/MOVE_PIECES / 2)) >= right_stop) //TODO: Broken
     {
         //ctx.drawImage(img, img.width - WIDTH * MOVE_PIECES * (Math.abs(turn) - (1/MOVE_PIECES / 2)), 0, img.width, img.height, 0, 0, WIDTH * MOVE_PIECES * (Math.abs(turn) - (1/MOVE_PIECES / 2)), WIDTH * ASPECT_RATIO); //DRAW RIGHT PART ON THE LEFT SIDE //TODO
 
