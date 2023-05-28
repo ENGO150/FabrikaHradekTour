@@ -39,6 +39,8 @@ const points =
     [38.43, 51, "45"],
     [39, 50, "48;50"],
     [8.62, 61.11, "53"],
+    [38.06, 49.55, "47;49"],
+    [87.25, 76.44, "3", 9, 16]
 ];
 
 const tolerance_x = 0.2;
@@ -64,8 +66,6 @@ window.onload = function()
                 break;
             }
         }
-
-        console.log(x, y); //TODO: REMOVE
     }
 }
 
