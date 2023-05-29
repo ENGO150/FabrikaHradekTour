@@ -7,3 +7,16 @@ body
     background-size: cover;
     user-select: none;
 }
+
+#back_button
+{
+    position: fixed;
+    margin-top: 1vh;
+    margin-left: 1vh;
+    font-size: xx-large;
+    padding: 1vh;
+    border-radius: 0.5vh;
+    background-color: #B97C15;
+    color: #C1BFBE;
+    border-color: #4D2B09;
+}

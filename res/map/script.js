@@ -62,7 +62,7 @@ window.onload = function()
                 (Math.abs(y - points[i][1]) <= tolerance_y || -Math.abs(y - points[i][1]) >= tolerance_y))
             )
             {
-                move(points[i][2], points[i][3], points[i][4]);
+                move_to_panorama(points[i][2], points[i][3], points[i][4]);
                 break;
             }
         }
@@ -74,7 +74,7 @@ function open_panorama(img, x, y)
     open("./res/panorama.html?img=" + img + "&aspect_x=" + x + "&aspect_y=" + y, "_self");
 }
 
-function move(img, x, y)
+function move_to_panorama(img, x, y)
 {
     if (!img.includes(";"))
     {
