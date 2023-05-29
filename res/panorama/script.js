@@ -46,6 +46,10 @@ function load_panorama()
             right_stop = 42;
             left_stop = 12;
             break;
+
+        case 1621/1216:
+            right_stop = 5;
+            left_stop = -7;
     }
 
     ASPECT_RATIO = 1 / ASPECT_RATIO; //FLIP THE RATIO COZ I AM FUCKING DUMB
@@ -73,7 +77,6 @@ function load_panorama()
 
 function turn_left()
 {
-    console.log((Math.abs(turn) - (1/MOVE_PIECES / 2)));
     if (turn < 0 && (Math.abs(turn) - (1/MOVE_PIECES / 2)) >= left_stop)
     {
         //ctx.drawImage(img, x1, 0, img.width * MOVE_PIECES * (Math.abs(turn) - (1/MOVE_PIECES / 2) + 1), img.height, 0 - x1, 0, img.width * MOVE_PIECES * (Math.abs(turn) - (1/MOVE_PIECES / 2) + 1) * WIDTH/img.width, WIDTH * ASPECT_RATIO); //DRAW A HALF OF img //TODO
