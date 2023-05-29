@@ -1,6 +1,7 @@
 #panorama
 {
     display: inline;
+    border-radius: 0.5vh;
 }
 
 #panorama_div
@@ -11,12 +12,16 @@
 
 #sipky
 {
-    margin-left: 47.5%;
+    margin-left: 97.5vh;
 }
 
 #sipky > button
 {
-    width: 50px;
-    height: 50px;
-    font-size: 30px;
+    width: 10vh;
+    height: 10vh;
+    font-size: xx-large;
+    border-radius: 0.5vh;
+    background-color: #B97C15;
+    color: #C1BFBE;
+    border-color: #4D2B09;
 }
