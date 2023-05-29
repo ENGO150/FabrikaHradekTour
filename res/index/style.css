@@ -1,0 +1,51 @@
+#textPole
+{
+    width: 55.5vh;
+    height: 25.5vh;
+    resize: none;
+    border-radius: 0.5vh;
+    font-size: 1.7vh;
+    user-select: none;
+}
+
+#TlacitkaVzhled
+{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 50vh;
+    padding:auto;
+    margin-left: 15vh;
+}
+
+.tlacitko
+{
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border-width: 2px;
+    border-color: #111D13;
+    width: 35vh;
+    height: 7vh;
+    color: #111D13;
+    font-size: larger;
+    /*14; 12; 27; 23; 21; 50; 59; 58*/
+}
+
+#textPole
+{
+    border-color: #3E392F;
+    background: #6F7270;
+    color: #C1BFBE;
+}
+.tlacitko
+{
+    color: #C1BFBE;;
+    background: #9E6812;
+    border-color: #4D2B09;
+    margin-bottom: 1vh;
+    border-radius: 0.84vh;
+    border-width: 0.32vh;
+    width: 35vh;
+    height: 7vh;
+    font-size: larger;
+}
