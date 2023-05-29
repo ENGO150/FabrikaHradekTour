@@ -1,5 +1,8 @@
-function move(url)
+function move(url, self)
 {
-    console.log(url);
-    open(url);
+    let parameter = "_blank";
+
+    if (self) parameter = "_self";
+
+    open(url, parameter);
 }
