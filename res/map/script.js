@@ -1,5 +1,5 @@
 const points =
-[//2 - 1; 2
+[
     [87.6, 78.4, "1;2", 9, 16],
     [86.2, 69.9, "27"],
     [86.5, 68.55, "26"],
@@ -48,8 +48,19 @@ const points =
 const tolerance_x = 0.2;
 const tolerance_y = 0.3;
 
+function info()
+{
+    if (!document.cookie.includes("opened"))
+    {
+        document.cookie = "opened";
+        alert("Můžete klikat na červené tečky pro otevření panoramat.");
+    }
+}
+
 window.onload = function()
 {
+    info();
+
     let img = document.querySelector("img");
     img.onclick = (e) =>
     {
