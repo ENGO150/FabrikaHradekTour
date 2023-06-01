@@ -21,7 +21,7 @@ body
     color: #C1BFBE;
 }
 
-#TlacitkaVzhled
+#nav_buttons
 {
     display: flex;
     flex-direction: column;
