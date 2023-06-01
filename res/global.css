@@ -11,8 +11,10 @@ body
 #back_button
 {
     position: fixed;
-    margin-top: 1vh;
-    margin-left: 1vh;
+    /* margin-top: 1vh;
+    margin-left: 1vh; */
+    top: 1vh;
+    left: 1vh;
     font-size: xx-large;
     padding: 1vh;
     border-radius: 0.5vh;
