@@ -1,0 +1,38 @@
+#centered
+{
+    margin-top: 1vh;
+    display: flex;
+}
+
+#centered > div, #autori_text
+{
+    color: #C1BFBE;
+}
+
+#autori_text
+{
+    border-color: #3E392F;
+    background: #6F7270;
+    width: fit-content;
+    padding: 1vh;
+    border-radius: 0.5vh;
+    margin: auto;
+    margin-top: 30vh;
+}
+
+.nadpis
+{
+    font-weight: bold;
+}
+
+#dino
+{
+    margin-left: auto;
+    margin-right: 2vh;
+}
+
+#vasek
+{
+    margin-right: auto;
+    margin-left: 2vh;
+}
