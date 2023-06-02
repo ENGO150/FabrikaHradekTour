@@ -24,31 +24,32 @@ function load_panorama()
     switch (ASPECT_RATIO) //178 = v; 134 = norm; 38 = adam norm; 66 = adam v; 42 = výškové
     {
         case 4/3: //TODO: Add 3/4 field
-            right_stop = 134;
-            left_stop = -8;
+            right_stop = -13;
+            left_stop = -7;
             break;
 
         case 3/4:
-            right_stop = 178;
+            right_stop = -16;
+            left_stop = 1;
             break;
 
         case 16/9:
-            right_stop = 38;
+            right_stop = -14;
             left_stop = -9;
             break;
 
         case 9/16:
-            right_stop = 66;
-            left_stop = 6;
+            right_stop = -5;
+            left_stop = 7;
             break;
 
         case 47/102:
-            right_stop = 42;
-            left_stop = 12;
+            right_stop = -7;
+            left_stop = -9;
             break;
 
         case 1621/1216:
-            right_stop = 5;
+            right_stop = -12;
             left_stop = -7;
     }
 
@@ -64,7 +65,9 @@ function load_panorama()
     }
 
     ctx.canvas.height = WIDTH * ASPECT_RATIO; //TODO! Possible shit happening
-    ctx.canvas.width = WIDTH / 2; //USER WILL SEE A 1/2 OF THE PANORAMA AT THE TIME
+    ctx.canvas.width = WIDTH * 3/4; //USER WILL SEE A 3/4 OF THE PANORAMA AT THE TIME
+
+    if (ASPECT_RATIO == (Math.round(102/47 * 10e14) / 10e14)) x1 -= 175;
 
     img.onload = function()
     {
