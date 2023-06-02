@@ -26,5 +26,5 @@ function change_slideshow_img()
 
     last_index = random_index;
 
-    setTimeout(change_slideshow_img, 3000);
+    setTimeout(function() {change_slideshow_img()}, 3000);
 }
