@@ -24,9 +24,12 @@ function change_slideshow_img()
         imgs_index_2.splice(random_index, 1);
     }
 
-    console.log(buffer[random_index] + "\n" + last_index + "\n\n");
+    //console.log(buffer[random_index] + "\n" + last_index + "\n\n");
 
     last_index = buffer[random_index];
+}
 
-    setTimeout(change_slideshow_img, 3000);
+function repeat_panorama()
+{
+    setInterval(change_slideshow_img, 3000);
 }
