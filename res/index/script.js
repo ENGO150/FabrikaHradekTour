@@ -4,13 +4,13 @@ let last_index = -1;
 
 function change_slideshow_img()
 {
-    let buffer = (imgs_index === undefined || imgs_index.length == 0) ? imgs_index_2 : imgs_index;
+    let buffer = (imgs_index === undefined || imgs_index.length === 0) ? imgs_index_2 : imgs_index;
     let random_index;
 
     do
     {
         random_index = Math.floor(Math.random() * buffer.length);
-    } while (random_index == last_index);
+    } while (buffer[random_index] == last_index);
 
     document.getElementById("slideshow").src = "http://207.180.212.190/fht/fabrika_imgs/downscaled/" + buffer[random_index] + ".jpg";
 
@@ -24,7 +24,9 @@ function change_slideshow_img()
         imgs_index_2.splice(random_index, 1);
     }
 
-    last_index = random_index;
+    console.log(buffer[random_index] + "\n" + last_index + "\n\n");
 
-    setTimeout(function() {change_slideshow_img()}, 3000);
+    last_index = buffer[random_index];
+
+    setTimeout(change_slideshow_img, 3000);
 }
