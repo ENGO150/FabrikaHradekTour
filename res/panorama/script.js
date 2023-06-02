@@ -23,7 +23,7 @@ function load_panorama()
 
     switch (ASPECT_RATIO) //178 = v; 134 = norm; 38 = adam norm; 66 = adam v; 42 = výškové
     {
-        case 4/3:
+        case 4/3: //TODO: Add 3/4 field
             right_stop = 134;
             left_stop = -8;
             break;
@@ -123,6 +123,6 @@ function check_param()
         open("../index.html", "_self");
     }
 
-    img_url = 'http://207.180.212.190/fht/fabrika_imgs/' + img_url + '.jpg'; //TODO: Change
+    img_url = 'http://207.180.212.190/fht/fabrika_imgs/downscaled/' + img_url + '.jpg'; //TODO: Change
     if (!x.startsWith(undefined)) ASPECT_RATIO = x / y;
 }
