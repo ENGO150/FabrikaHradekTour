@@ -13,11 +13,12 @@
 	<script src="./res/global.js"></script>
 	<link rel="stylesheet" href="./res/global.css">
 
+	<script src="./res/index/script.js"></script>
 	<link rel="stylesheet" href="./res/index/style.css">
 
     <title>Fabrika Hrádek Tour</title>
 </head>
-<body>
+<body onload="change_slideshow_img()">
 	<nav id="nav_buttons">
 		<button class="tlacitko" onclick="move('./map.html', true)">Mapa</button>
 		<button class="tlacitko" onclick="move('https://earth.google.com/web/@49.71686994,13.64771387,395.10185485a,550.97177309d,35y,0h,0t,0r', false)">Google Earth</button>
@@ -25,6 +26,6 @@
 	</nav>
 	<textarea id="textPole" placeholder="..." c readonly>Železárny Hrádek u Rokycan jsou významným průmyslovým podnikem v České republice. Jejich historie sahá až do 16. století, kdy byla založena první huť. Specializovaly se na výrobu železa a oceli a byly známé svými kvalitními kovovými výrobky. Železárnám Hrádek byly v průběhu let prováděny stavební úpravy a modernizace, aby udržely krok s technologickým vývojem. Bohužel, v současnosti se železárny potýkají s problémy kvůli jejich majiteli Zdeňkovi Zemkovi. Zdeněk Zemek byl obviněn ze spáchání podvodů a obžalován státním zástupcem. Je třeba zajistit ochranu hodnoty a dědictví železáren Hrádek a obnovit důvěru ve spravedlivý průběh podnikání.</textarea>
 
-	<img src="" id="slideshow">
+	<img id="slideshow">
 </body>
 </html>

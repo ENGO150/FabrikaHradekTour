@@ -44,3 +44,14 @@ body
     height: 7vh;
     font-size: larger;
 }
+
+#slideshow
+{
+    width: 40vh;
+    height: 30vh;
+    position: fixed;
+    bottom: 0vh;
+    right: 0vh;
+    border-top-left-radius: 0.7vh;
+    filter: drop-shadow(-0.5vh -0.5vh 1vh black);
+}
