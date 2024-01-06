@@ -12,7 +12,7 @@ function change_slideshow_img()
         random_index = Math.floor(Math.random() * buffer.length);
     } while (buffer[random_index] == last_index);
 
-    document.getElementById("slideshow").src = "http://207.180.212.190/fht/fabrika_imgs/downscaled/" + buffer[random_index] + ".jpg";
+    document.getElementById("slideshow").src = "http://109.123.243.163/fht/fabrika_imgs/downscaled/" + buffer[random_index] + ".jpg";
 
     if (imgs_index.includes(buffer[random_index]))
     {
