@@ -1,4 +1,5 @@
-let imgs_index = [ 59, 58, 56, 55, 54, 67, 66, 64, 61, 60 ];
+//let imgs_index = [ 59, 58, 56, 55, 54, 67, 66, 64, 61, 60 ];
+let imgs_index = [ 54, 55, 56, 57, 58, 59, 60, 61, 62, 63 ];
 let imgs_index_2 = [];
 let last_index = -1;
 
