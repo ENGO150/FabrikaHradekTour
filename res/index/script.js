@@ -6,11 +6,12 @@ let last_index = -1;
 function change_slideshow_img()
 {
     let buffer = (imgs_index === undefined || imgs_index.length === 0) ? imgs_index_2 : imgs_index;
-    let random_index;
+    let random_index = 5;
 
     do
     {
         random_index = Math.floor(Math.random() * buffer.length);
+        console.log("A");
     } while (buffer[random_index] == last_index);
 
     document.getElementById("slideshow").src = "http://109.123.243.163/fht/fabrika_imgs/downscaled/" + buffer[random_index] + ".jpg";
