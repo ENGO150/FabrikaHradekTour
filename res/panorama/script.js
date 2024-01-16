@@ -51,6 +51,10 @@ function load_panorama()
         case 1621/1216:
             right_stop = -12;
             left_stop = -7;
+
+        case 500/281:
+            right_stop = -14;
+            left_stop = -9;
     }
 
     ASPECT_RATIO = 1 / ASPECT_RATIO; //FLIP THE RATIO COZ I AM FUCKING DUMB
